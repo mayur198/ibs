@@ -1,0 +1,21 @@
+<nav class="navbar navbar-expand-sm fixed-top navbar-light" >
+  
+    <div class="container">
+      
+        <a class="navbar-brand" href="#"  style="color: aliceblue;" ><span style="color: orange;">LBS</span>PL</a>
+        <button class="navbar-toggler" type="button" (click)="toggleCollapse()">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" #navbarCollapse id="navbar1">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/home" routerLinkActive="active" style="color: aliceblue;" >HOME</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/employeelist" routerLinkActive="active"  style="color: aliceblue;" >EMPLOYEE DETAILS</a>
+                </li>
+               
+            </ul>
+        </div>
+    </div>
+</nav>

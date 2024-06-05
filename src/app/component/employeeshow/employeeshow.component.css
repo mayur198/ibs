@@ -1,0 +1,19 @@
+.show h2{
+    text-align: center;
+}
+.show .row{
+    display:flex;
+ justify-content: space-around;
+    margin: 2rem;
+    
+}
+.show .ab{
+    display:flex;
+    
+    flex-direction: column;
+}
+.show .aa{
+    display:flex;
+    /* margin-left: 28rem; */
+    flex-direction: column;
+}

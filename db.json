@@ -1,0 +1,28 @@
+{
+  "employee": [
+    {
+      "name": "rajeni Waghe",
+      "email": "rj@gmail.com",
+      "mobile": "9146433453",
+      "team": "sale",
+      "address": "navimumbai",
+      "id": "aaf4"
+    },
+    {
+      "name": "pooja waghe",
+      "email": "pW@gmail.com",
+      "mobile": "0914643424",
+      "team": "IT",
+      "address": "45212120",
+      "id": "50b8"
+    },
+    {
+      "id": "751d",
+      "name": "manish kulabkar",
+      "email": "mk@gmail.com",
+      "mobile": "9146434523",
+      "team": "sale",
+      "address": "bhardkhol"
+    }
+  ]
+}

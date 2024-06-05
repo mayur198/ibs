@@ -1,0 +1,64 @@
+<form [formGroup]="registerForm" (ngSubmit)="submitRegister(registerForm.value)">
+    <div class="row">
+        <div class="input_box col-12">
+            <input type="text" class="form-control" id="name" formControlName="name" required>
+            <label for="name">Full Name*</label>
+            <div class="form-text text-danger" *ngIf="Name.errors?.['required'] && (Name.touched || Name.dirty)">
+                Name is Required
+            </div>
+            <div class="form-text text-danger" *ngIf="Name.errors?.['minlength'] && (Name.touched || Name.dirty )">
+                Name is too short
+            </div>
+            <div class="form-text text-danger" *ngIf="Name.errors?.['pattern'] && (Name.touched || Name.dirty )">
+                Name should start with Alphabet
+            </div>
+        </div>
+        <div class="input_box col-12">
+            <input type="email" class="form-control" id="email" formControlName="email" required>
+            <label for="email">Email*</label>
+            <div class="form-text text-danger"
+            *ngIf="Email.errors?.['required'] && (Email.touched || Email.dirty)">
+            Email is Required.
+        </div>
+        <div class="form-text text-danger"
+            *ngIf="Email.errors?.['email'] && (Email.touched || Email.dirty )">
+            Email is Invalid.
+        </div>
+        </div>
+        <div class="input_box col-12">
+            <input type="tel" class="form-control" id="mobile" formControlName="mobile" required>
+            <label for="mobile">Phone No*</label>
+            <div class="form-text text-danger"
+            *ngIf="Mobile.errors?.['required'] && (Mobile.touched || Mobile.dirty)">
+            Number is Required.
+        </div>
+        <div class="form-text text-danger" *ngIf="Mobile.errors?.['pattern'] ">
+            Number is Invalid.
+        </div>
+        <div class="form-text text-danger"
+            *ngIf="Mobile.errors?.['minlength'] && (Mobile.touched || Mobile.dirty )">
+            Number is too short
+        </div>
+        <div class="form-text text-danger"
+            *ngIf="Mobile.errors?.['maxlength'] && (Mobile.touched || Mobile.dirty )">
+            Number is too Long.
+        </div>
+        </div>
+        <div class="form-group input_box col-12">
+            <select id="team" class="form-control" formControlName="team">
+                <option value="" disabled selected>Team</option>
+                <option value="IT">IT Team</option>
+                <option value="HR">HR Team</option>
+                <option value="sale">Sale Team</option>
+            </select>
+        </div>
+        <div class="input_box col-12">
+            <textarea type="text" class="form-control" id="address" formControlName="address" required></textarea>
+            <label for="address">Address</label>
+        </div>
+        <div class="col-12">
+            <button type="submit" class="btn btn-primary">Register</button>
+            <!-- [disabled]="registerForm.invalid" -->
+        </div>
+    </div>
+</form>

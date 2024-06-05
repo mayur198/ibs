@@ -1,0 +1,42 @@
+<div class="container-fluid middle-section" style="position: relative; top: 8.1rem;">
+
+  <div class="row justify-content-center">
+    <h4>Employee Directory </h4>
+    <a class="btn" (click)="register()" mdbWavesEffect>Add New Employee</a>
+
+  </div>
+
+</div>
+<div class="wrapper">
+  <div class="divider div-transparent"></div>
+</div>
+
+<table class="table" >
+  <thead>
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Email</th>
+      <th scope="col">Team</th>
+      <th scope="col"></th>
+
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let employee of employees">
+
+      <td>{{employee.name}}</td>
+      <td>{{employee.email}}</td>
+      <td>{{employee.team}}</td>
+      <td>
+       
+        <button type="button" class="btn btn-info" style="margin-right: 10px;"(click)="showemployee(employee.id)">Show </button>
+        <button type="button" class="btn btn-primary" style="margin-right: 10px;"(click)="editemployee(employee.id)">Edit </button>
+        <button type="button" class="btn btn-danger" (click)="deleteemp(employee.id)">Delete </button>
+      </td>
+
+    </tr>
+
+  </tbody>
+</table>
+<!-- <mat-paginator [length]="100" [pageSize]="10" [pageSizeOptions]="[5, 10, 25, 100]" aria-label="Select page">
+</mat-paginator> -->
